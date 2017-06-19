@@ -19,13 +19,28 @@ class Header extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <LinkContainer to="/resume"><li><a>resume</a></li></LinkContainer>
-            <LinkContainer to="/photos"><li><a>photography</a></li></LinkContainer>
+            <LinkContainer to="/resume">
+              <li>
+                <a>
+                  <i className="fa fa-briefcase" aria-hidden="true"></i><br />resume
+                </a>
+              </li>
+            </LinkContainer>
+            <LinkContainer to="/photos">
+              <li>
+                <a>
+                  <i className="fa fa-camera" aria-hidden="true"></i><br />photography
+                </a>
+              </li>
+            </LinkContainer>
             <li>
-              <Mailto email="nicholaspetru@gmail.com" obfuscate={true} headers={ headers }>email</Mailto>
+              <a className="mail-link">
+                <i className="fa fa-envelope" aria-hidden="true"></i><br />
+                <Mailto email="nicholaspetru@gmail.com" obfuscate={true} headers={ headers }>email</Mailto>
+              </a>
             </li>
             <NavItem href="https://www.linkedin.com/in/nicholaspetru/" target="_blank">
-              linkedin
+              <i className="fa fa-linkedin-square" aria-hidden="true"></i><br />linkedin
             </NavItem>
           </Nav>
         </Navbar.Collapse>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
+import './assets/font-awesome/css/font-awesome.min.css';
 import './App.css';
 import Header from './components/header.jsx';
 import Home from './components/home.jsx';

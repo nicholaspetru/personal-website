@@ -54,6 +54,13 @@ $prime-color-darkest: darken($prime-color, 20%);
   .navbar-collapse.in, .navbar-collapse.collapsing {
     text-align: right;
   }
+  .mail-link {
+    padding: 15px;
+  }
+  .fa {
+    font-size: 25px;
+    color: white;
+  }
 }
 
 .homepage {
