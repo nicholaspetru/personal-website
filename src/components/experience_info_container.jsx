@@ -20,10 +20,10 @@ class ExperienceInfoContainer extends Component {
       <Row className="experience-info-container">
         <Col xs={ 8 }>
           <div className="info-box">
-            <h3 className="experience-info">{ organization }</h3>
-            <h4 className="experience-info">{ position }</h4>
-            <h5 className="experience-info">{ location }</h5>
-            <h5 className="experience-info">{ duration }</h5>
+            <h1 className="experience-info">{ organization }</h1>
+            <h3 className="experience-info">{ position }</h3>
+            <h4 className="experience-info">{ location }</h4>
+            <h4 className="experience-info">{ duration }</h4>
           </div>
         </Col>
         <Col xs={ 4 }>

@@ -7,7 +7,7 @@ class ExperienceItem extends Component {
     let { experienceKey, activeKey, logo, handleClick } = this.props
     return (
         <Col
-          xs={ 4 }
+          xs={ 3 }
           className={ `job-container ${ experienceKey===activeKey ? 'active' : '' } ` }
           onClick={ () => handleClick(experienceKey) }
         >

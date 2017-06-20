@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ExperienceItem from './experience_item.jsx';
 import ExperienceInfoContainer from './experience_info_container.jsx';
 import EXPERIENCES from '../experience_list.js';
@@ -10,6 +10,7 @@ class JobContainer extends Component {
     this.state = { active: 'nfx' };
     this.buildExperience = this.buildExperience.bind(this);
     this.activateExperience = this.activateExperience.bind(this);
+    this.displayReference = this.displayReference.bind(this);
   }
 
   buildExperience = (EXPERIENCES, activate, active) => {
@@ -30,15 +31,30 @@ class JobContainer extends Component {
     this.setState({ active: experienceKey })
   }
 
+  displayReference(reference) {
+    if (reference) {
+      return (
+        <Col xs={ 8 } className="reference">
+          <p>{ reference.note }</p>
+          <span>-&nbsp;{ reference.person }</span>
+        </Col>
+      )
+    }
+
+  }
+
   render() {
     const activateExperience = this.activateExperience
+    let currentJob = EXPERIENCES[this.state.active]
     return (
       <div className="experience-section">
         <Row>
           { this.buildExperience(EXPERIENCES, activateExperience, this.state.active) }
         </Row>
-        <div style={ { borderBottom: '1px dashed #A3ABE0', width: '50%', margin: '0 auto' } } />
-        <ExperienceInfoContainer { ...EXPERIENCES[this.state.active] } />
+        <ExperienceInfoContainer { ...currentJob } />
+        <Row>
+          { this.displayReference(currentJob.reference) }
+        </Row>
       </div>
     );
   }

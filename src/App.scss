@@ -2,6 +2,10 @@ $prime-color: #134B57;
 $prime-color-dark: darken($prime-color, 10%);
 $prime-color-darkest: darken($prime-color, 20%);
 
+* {
+  font-family: 'Muli', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -56,10 +60,11 @@ $prime-color-darkest: darken($prime-color, 20%);
   }
   .mail-link {
     padding: 15px;
+    cursor: pointer;
   }
   .fa {
     font-size: 25px;
-    color: white;
+    color: #fff;
   }
 }
 
@@ -101,6 +106,14 @@ $prime-color-darkest: darken($prime-color, 20%);
   .row {
     margin-top: 10px;
     margin-bottom: 10px;
+    .reference {
+      margin: 0 auto;
+      float: none;
+      text-align: left;
+      span {
+        float: right;
+      }
+    }
   }
   .job-container {
     width: 24vw;
@@ -158,14 +171,17 @@ $prime-color-darkest: darken($prime-color, 20%);
         background-color: #176F96;
       }
     }
+    @media (max-width: 400px) {
+      padding: 0;
+    }
   }
   .experience-info-container {
     margin: 20px 0;
-    h3, h4, h5, h2, a {
+    h1, h2, h3, h4, h5, a {
       color: #176F96
     }
     .info-box {
-      max-width: 300px;
+      max-width: 400px;
       text-align: left;
       margin: 0 auto;
 

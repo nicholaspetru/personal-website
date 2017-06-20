@@ -21,23 +21,22 @@ class Header extends Component {
           <Nav pullRight>
             <LinkContainer to="/resume">
               <li>
-                <a>
+                <a className="mail-link">
                   <i className="fa fa-briefcase" aria-hidden="true"></i><br />resume
                 </a>
               </li>
             </LinkContainer>
             <LinkContainer to="/photos">
               <li>
-                <a>
+                <a className="mail-link">
                   <i className="fa fa-camera" aria-hidden="true"></i><br />photography
                 </a>
               </li>
             </LinkContainer>
             <li>
-              <a className="mail-link">
-                <i className="fa fa-envelope" aria-hidden="true"></i><br />
-                <Mailto email="nicholaspetru@gmail.com" obfuscate={true} headers={ headers }>email</Mailto>
-              </a>
+              <Mailto className="mail-link" email="nicholaspetru@gmail.com" obfuscate={true} headers={ headers }>
+                <i className="fa fa-envelope" aria-hidden="true"></i><br />email
+              </Mailto>
             </li>
             <NavItem href="https://www.linkedin.com/in/nicholaspetru/" target="_blank">
               <i className="fa fa-linkedin-square" aria-hidden="true"></i><br />linkedin

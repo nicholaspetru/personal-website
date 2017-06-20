@@ -27,7 +27,11 @@ const EXPERIENCES = {
       'Ensured all websites are SEO optimized',
       'Offered design recommendations that clients liked and implemented',
       'Worked with the Engineering team during monthly code releases to ensure websites receive necessary code updates'
-    ]
+    ],
+    reference: {
+      note: '"In 90-days Nick quickly moved from Intern to Web Developer, where he rolled up his sleeves to perform the research required to tackle complex projects and ensure proper documentation. His work ethic and interactions with clients were very professional and seemed to come naturally to him. Nick has potential for a very successful career in technology."',
+      person: 'Lauren Smith, COO'
+    }
   },
   'ocs': {
     organization: 'Off Campus Studies',
