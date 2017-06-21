@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Gallery from 'react-photo-gallery';
 import { Modal } from 'react-bootstrap';
 import PHOTOS from '../assets/image_src.js';
+import Scroll from 'react-scroll';
 
 class Photography extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Photography extends Component {
   render() {
     let index = this.state.currentPhotoIndex;
     return (
-      <div className="Photography">
+      <div className="photography">
         <h2 className="text-left">Spain and thereabouts</h2>
         <Gallery photos={ PHOTOS.slice(0, 20) } onClickPhoto={ this.handleSpainClick } />
         <br />
@@ -41,6 +42,9 @@ class Photography extends Component {
             <img src={ PHOTOS[index].src } className="modal-photo" />
           </Modal.Body>
         </Modal>
+        <a onClick={ () => Scroll.animateScroll.scrollToTo() } className="scroll-box">
+          <i className="fa fa-angle-up" aria-hidden="true"></i>
+        </a>
       </div>
     );
   }

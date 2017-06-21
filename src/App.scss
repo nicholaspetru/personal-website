@@ -8,6 +8,15 @@ $prime-color-darkest: darken($prime-color, 20%);
 
 .App {
   text-align: center;
+  .route-container {
+    margin-top: 60px;
+    &.scrolled {
+      margin-top: 60px;
+    }
+    @media (min-width: 768px) {
+      margin-top: 140px;
+    }
+  }
 }
 
 .App-header {
@@ -28,15 +37,31 @@ $prime-color-darkest: darken($prime-color, 20%);
 }
 
 .header.navbar-inverse {
+  z-index: 999;
+  position: fixed;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  .navbar-header {
+    padding-top: 14px;
+    -webkit-transition: padding .5s;
+    transition: padding .5s;
+    a {
+      -webkit-transition: font-size .5s;
+      transition: font-size .5s;
+    }
+
+  }
   @media (min-width: 768px) {
     height: 120px;
   }
   @media (max-width: 767px) {
     .navbar-header {
       width: 100vw;
+      padding-top: 0;
     }
   }
   background-image: none;
@@ -58,13 +83,57 @@ $prime-color-darkest: darken($prime-color, 20%);
   .navbar-collapse.in, .navbar-collapse.collapsing {
     text-align: right;
   }
+  .navbar-collapse.in, .navbar-collapse.collapsing {
+    height: calc(100vh - 50px);
+    .navbar-nav {
+      height: calc(100% - 15px);
+      margin-top: 0;
+      li {
+        height: 25%;
+        .mail-link {
+          text-align: center;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
   .mail-link {
     padding: 15px;
     cursor: pointer;
+    -webkit-transition: padding .5s;
+    transition: padding .5s;
   }
   .fa {
     font-size: 25px;
     color: #fff;
+    -webkit-transition: font-size .5s;
+    transition: font-size .5s;
+  }
+}
+
+@media (min-width: 768px) {
+  .header.navbar-inverse.scrolled {
+    height: 60px;
+    .navbar-header {
+      padding: 0;
+      a {
+        font-size: 24px;
+      }
+    }
+  }
+  .navbar-collapse.scrolled {
+    .fa {
+      font-size: 20px;
+    }
+    .mail-link {
+      padding: 10px;
+    }
+    span {
+      display: none;
+    }
   }
 }
 
@@ -188,7 +257,16 @@ $prime-color-darkest: darken($prime-color, 20%);
     }
   }
 }
+.photography .scroll-box {
+  background-color: rgba(0, 0, 0, .4);
+  position: absolute;
+  right: 17px;
+  i {
+    font-size: 45px;
+    color: #fff;
+  }
 
+}
 .gallery-modal.fade.in.modal .modal-dialog {
   width: 95vw;
   .modal-photo {
