@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Gallery from 'react-photo-gallery';
 import { Modal } from 'react-bootstrap';
 import PHOTOS from '../assets/image_src.js';
-import Scroll from 'react-scroll';
 
 class Photography extends Component {
   constructor(props) {
@@ -42,9 +41,6 @@ class Photography extends Component {
             <img src={ PHOTOS[index].src } className="modal-photo" />
           </Modal.Body>
         </Modal>
-        <a onClick={ () => Scroll.animateScroll.scrollToTo() } className="scroll-box">
-          <i className="fa fa-angle-up" aria-hidden="true"></i>
-        </a>
       </div>
     );
   }

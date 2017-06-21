@@ -1,4 +1,4 @@
-$prime-color: #134B57;
+$prime-color: #13668C;
 $prime-color-dark: darken($prime-color, 10%);
 $prime-color-darkest: darken($prime-color, 20%);
 
@@ -9,7 +9,7 @@ $prime-color-darkest: darken($prime-color, 20%);
 .App {
   text-align: center;
   .route-container {
-    margin-top: 60px;
+    margin-top: 72px;
     &.scrolled {
       margin-top: 60px;
     }
@@ -89,7 +89,7 @@ $prime-color-darkest: darken($prime-color, 20%);
       height: calc(100% - 15px);
       margin-top: 0;
       li {
-        height: 25%;
+        height: 20%;
         .mail-link {
           text-align: center;
           height: 100%;
@@ -130,46 +130,62 @@ $prime-color-darkest: darken($prime-color, 20%);
     }
   }
   .navbar-collapse.scrolled {
+    .navbar-nav {
+      margin-top: 5px !important;
+    }
     .fa {
       font-size: 20px;
+      margin-top: 5px;
     }
     .mail-link {
       padding: 10px;
+      i {
+        margin-top: 0;
+      }
     }
-    span {
+    br, span {
       display: none;
+    }
+    &.in {
+      .navbar-nav {
+        margin-top: 5px !important;
+      }
     }
   }
 }
 
 .homepage {
-  background-image: url('./assets/photos/IMG_9661-min.JPG');
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 66.7vw;
-  width: 100vw;
-  margin-left: -15px;
-  margin-top: -20px;
-  @media (max-width: 600px) {
-    background-image: url('./assets/photos/IMG_9661_tablet-min.JPG');
-    height: 120vw;
-  }
-  @media (max-width: 400px) {
-    background-image: url('./assets/photos/IMG_9661_mobile-min.JPG');
-    height: 175vw;
+  .intro-banner {
+    background-image: url('./assets/photos/IMG_8464-min.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin-left: -15px;
+    margin-top: -20px;
+    div {
+      position: relative;
+      top: 49vh;
+      h1 {
+        font-size: 60px;
+        color: #fff;
+      }
+    }
+    @media (min-width: 1200px) {
+      div {
+        top: 68vh;
+      }
+    }
   }
   .bio {
     text-align: left;
-    background: #000;
-    opacity: .6;
+    background-color: $prime-color-dark;
+    opacity: .8;
     color: #fff;
-    font-size: 15px;
-    border-radius: 10%;
-    width: 75%;
+    font-size: 18px;
     float: right;
     padding: 20px;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin: 10px 0px;
   }
 }
 
@@ -262,16 +278,7 @@ $prime-color-darkest: darken($prime-color, 20%);
     }
   }
 }
-.photography .scroll-box {
-  background-color: rgba(0, 0, 0, .4);
-  position: absolute;
-  right: 17px;
-  i {
-    font-size: 45px;
-    color: #fff;
-  }
 
-}
 .gallery-modal.fade.in.modal .modal-dialog {
   width: 95vw;
   .modal-photo {
