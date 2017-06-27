@@ -28,7 +28,7 @@ class ExperienceInfoContainer extends Component {
         </Col>
         <Col xs={ 4 }>
           <ButtonGroup vertical style={ { marginTop: 20 } }>
-            <Button className="custom-btn" onClick={ this.toggleModal }>Read more</Button>
+            <Button className="custom-btn info" onClick={ this.toggleModal }>Read more</Button>
             <Button className="custom-btn" disabled={ !website } href={ website } target="_blank">View site</Button>
           </ButtonGroup>
           <Modal show={ this.state.showModal } onHide={ this.toggleModal }>
