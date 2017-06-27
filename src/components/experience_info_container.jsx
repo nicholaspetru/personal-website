@@ -32,7 +32,7 @@ class ExperienceInfoContainer extends Component {
             <Button className="custom-btn" disabled={ !website } href={ website } target="_blank">View site</Button>
           </ButtonGroup>
           <Modal show={ this.state.showModal } onHide={ this.toggleModal }>
-            <Modal.Header>
+            <Modal.Header closeButton>
               <h3>{ organization }</h3>
               <h4>{ position }</h4>
             </Modal.Header>
