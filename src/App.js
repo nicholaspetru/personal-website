@@ -36,9 +36,9 @@ class App extends Component {
           <Header scrolled={ this.state.scrolled }/>
           <Grid fluid>
             <div className={ classNames('route-container', { scrolled: this.state.scrolled }) }>
-              <Route exact path="/" component={ Home } />
-              <Route path="/resume" component={ JobContainer } />
-              <Route path="/photos" component={ Photography } />
+              <Route exact path="/personal-website" component={ Home } />
+              <Route path="/personal-website/resume" component={ JobContainer } />
+              <Route path="/personal-website/photos" component={ Photography } />
             </div>
           </Grid>
         </div>

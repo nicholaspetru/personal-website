@@ -29,20 +29,20 @@ class Header extends Component {
       <Navbar inverse collapseOnSelect className={ classNames('header', { scrolled: this.props.scrolled }) }>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">nick petru</Link>
+            <Link to="/personal-website">nick petru</Link>
           </Navbar.Brand>
           <Navbar.Toggle onClick={ this.handleToggleSelect } />
         </Navbar.Header>
         <Navbar.Collapse in={ this.state.expanded } className={ classNames({ scrolled: this.props.scrolled }) }>
           <Nav pullRight>
-            <LinkContainer to="/resume" onClick={ this.handleSelect }>
+            <LinkContainer to="/personal-website/resume" onClick={ this.handleSelect }>
               <li>
                 <a className="mail-link">
                   <i className="fa fa-briefcase" aria-hidden="true"></i><br /><span>resume</span>
                 </a>
               </li>
             </LinkContainer>
-            <LinkContainer to="/photos" onClick={ this.handleSelect }>
+            <LinkContainer to="/personal-website/photos" onClick={ this.handleSelect }>
               <li>
                 <a className="mail-link">
                   <i className="fa fa-camera" aria-hidden="true"></i><br /><span>photography</span>
