@@ -176,7 +176,12 @@ $prime-color-darkest: darken($prime-color, 20%);
     }
     @media (min-width: 1200px) {
       div {
-        top: 68vh;
+        top: 52vh;
+      }
+    }
+    @media (min-width: 1600px) {
+      div {
+        top: 60vh;
       }
     }
   }
