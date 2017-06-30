@@ -32,11 +32,19 @@ $prime-color-darkest: darken($prime-color, 20%);
 }
 
 .custom-btn {
-  width: 100px;
   font-size: 16px;
   &.info {
     font-weight: bold;
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.padded-copy {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .header.navbar-inverse {
@@ -199,8 +207,6 @@ $prime-color-darkest: darken($prime-color, 20%);
 
 .experience-section {
   margin-bottom: 20px;
-  border-top: 2px solid #42A49B;
-  border-bottom: 2px solid #42A49B;
   .row {
     margin-top: 10px;
     margin-bottom: 10px;

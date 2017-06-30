@@ -38,7 +38,7 @@ class Photography extends Component {
         <Gallery photos={ PHOTOS.slice(20) } onClickPhoto={ this.handleWildClick } />
         <Modal show={ this.state.showModal } onHide={ this.toggleModal } className="gallery-modal">
           <Modal.Body>
-            <img src={ PHOTOS[index].src } className="modal-photo" />
+            <img src={ PHOTOS[index].src } alt={ PHOTOS[index].alt } className="modal-photo" />
           </Modal.Body>
         </Modal>
       </div>

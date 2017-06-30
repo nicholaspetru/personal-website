@@ -11,7 +11,7 @@ class ExperienceItem extends Component {
           className={ `job-container ${ experienceKey===activeKey ? 'active' : '' } ` }
           onClick={ () => handleClick(experienceKey) }
         >
-          <img src={ logo } className="experience-item" />
+          <img src={ logo } alt={ experienceKey } className="experience-item" />
         </Col>
     );
   }
