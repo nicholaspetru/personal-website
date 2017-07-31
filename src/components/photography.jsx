@@ -23,7 +23,7 @@ class Photography extends Component {
 
   handleWildClick(photoIndex) {
     this.setState({ showModal: true })
-    this.setState({ currentPhotoIndex: photoIndex + 20 })
+    this.setState({ currentPhotoIndex: photoIndex + 19 })
   }
 
   render() {
@@ -31,12 +31,15 @@ class Photography extends Component {
     return (
       <div className="photography">
         <h2 className="text-left">Spain and thereabouts</h2>
-        <Gallery photos={ PHOTOS.slice(0, 20) } onClickPhoto={ this.handleSpainClick } />
+        <Gallery photos={ PHOTOS.slice(0, 19) } onClickPhoto={ this.handleSpainClick } />
         <br />
         <br />
         <h2 className="text-left">Wildernesses</h2>
-        <Gallery photos={ PHOTOS.slice(20) } onClickPhoto={ this.handleWildClick } />
+        <Gallery photos={ PHOTOS.slice(19) } onClickPhoto={ this.handleWildClick } />
         <Modal show={ this.state.showModal } onHide={ this.toggleModal } className="gallery-modal">
+          <Modal.Header closeButton className="small-modal-header">
+            <p className="no-margin">{ PHOTOS[index].caption }</p>
+          </Modal.Header>
           <Modal.Body>
             <img src={ PHOTOS[index].src } alt={ PHOTOS[index].alt } className="modal-photo" />
           </Modal.Body>

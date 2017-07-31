@@ -5,7 +5,7 @@ const EXPERIENCES = {
     duration: 'October 2016 - April 2017',
     location: 'San Francisco Bay Area',
     website: 'https://signal.nfx.com',
-    logo: 'https://pbs.twimg.com/profile_images/808368235712311296/Qd9n9svM.jpg',
+    logo: require('./assets/photos/nfx_logo.png'),
     tasks: [
       'Part of the core team (3 Eng, 1 PM) that built and launched Signal - a network of startup founders and investors that leverages its Gmail graph to add efficiency and transparency to the fundraising process',
       'Maintained religious adherence to agile methodologies by engineering and participating in product development and MVP scoping',
@@ -19,7 +19,7 @@ const EXPERIENCES = {
     duration: 'October 2015 – October 2016',
     location: 'San Francisco',
     website: 'http://www.ascendify.com/',
-    logo: require('./assets/asc_circle_Logo.png'),
+    logo: require('./assets/photos/asc_circle_Logo.png'),
     tasks: [
       'Built modern, responsive websites from scratch that leveraged the company\'s widget technology for clients such as NFL, GE, Panasonic, Cisco, and Marriott.',
       'Worked in JavaScript, jQuery, HTML5, CSS3, and PHP.',
