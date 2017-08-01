@@ -60,8 +60,8 @@ class Header extends Component {
               </a>
             </li>
             <li>
-              <a className="mail-link" href="https://www.instagram.com/picknetru/" target="_blank" rel="noopener noreferrer">
-                <i className="fa fa-instagram" aria-hidden="true"></i><br /><span>instagram</span>
+              <a className="mail-link" href="https://github.com/nicholaspetru/" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-github" aria-hidden="true"></i><br /><span>github</span>
               </a>
             </li>
           </Nav>
